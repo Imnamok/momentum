@@ -8,41 +8,50 @@
   </head>
 
   <body>
-    <h2 id="clock">00:00:00</h2>
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-
-    <h1 id="greeting" class="hidden"></h1>
-
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-
-    <div id="quote">
-      <span></span>
-      <span></span>
+    <div id="login-page">
+      <form id="login-form">
+        <div class="login-box">
+          <span>어서와요, 만나서 반가워요.</span>
+          <input class="login-box__input" required maxlength="15" type="text" placeholder="당신의 이름을 알려주세요." />
+        </div>
+      </form>
     </div>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+    <div id="main-page" class="hidden">
+      <h1 id="maindate"></h1>
+      <h2 id="mainclock">00:00:00</h2>
+      <h1 id="greeting"></h1>
 
-<div></div>
+      <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required />
+      </form>
+      <ul id="todo-list"></ul>
+
+      <div id="flower">
+        <span class="flowerName"></span>
+        <span class="flowerLang"></span>
+      </div>
+
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="logout-container">
+        <button class="logout">
+          <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
+          <span>Log Out</span>
+        </button>
+      </div>
+    </div>
 
     <script src="js/greetings.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
+    <script src="js/date-clock.js"></script>
+    <script src="js/flower.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+
+    <script src="https://kit.fontawesome.com/46d58f205e.js" crossorigin="anonymous"></script>
   </body>
 </html>

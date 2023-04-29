@@ -1,11 +1,24 @@
+/* Fonts */
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+/* CSS */
+@import "src/login.css";
+@import "src/main.css";
+
 .hidden {
   display: none;
 }
+
+body {
+  font-family: "Nanum Myeongjo", serif;
+}
+
 
 img {
   position: absolute;
   width: 100vw;
   height: 100vh;
+  background-size: contain;
   top: 0px;
   bottom: 0px;
   left: 0px;

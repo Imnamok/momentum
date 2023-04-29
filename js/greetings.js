@@ -1,30 +1,40 @@
+const loginPage = document.querySelector("#login-page");
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const greeting = document.querySelector("#greeting");
+const mainPage = document.querySelector("#main-page");
+const logoutBtn = document.querySelector(".logout");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  loginForm.classList.add(HIDDEN_CLASSNAME);
+  loginPage.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
-  localStorage.setItem("username", username);
   localStorage.setItem(USERNAME_KEY, username);
   paintGreetings(username);
 }
 
-function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
-  greeting.classList.remove(HIDDEN_CLASSNAME);
+function onLogoutSubmit() {
+  localStorage.removeItem(USERNAME_KEY);
+  loginPage.classList.remove(HIDDEN_CLASSNAME);
+  mainPage.classList.add(HIDDEN_CLASSNAME);
+  loginInput.value = "";
 }
 
-loginForm.addEventListener("submit", onLoginSubmit);
+function paintGreetings(username) {
+  greeting.innerText = `안녕하세요. ${username}님! \n 오늘도 좋은 하루 보내세요.`;
+  loginPage.classList.add(HIDDEN_CLASSNAME);
+  mainPage.classList.remove(HIDDEN_CLASSNAME);
+}
+
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if (savedUsername === null) {
-  loginForm.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener("submit", onLoginSubmit);
+  loginPage.classList.remove(HIDDEN_CLASSNAME);
 } else {
   paintGreetings(savedUsername);
 }
+
+loginForm.addEventListener("submit", onLoginSubmit);
+logoutBtn.addEventListener("click", onLogoutSubmit);
