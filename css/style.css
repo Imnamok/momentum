@@ -2,8 +2,11 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 
 /* CSS */
-@import "src/login.css";
+@import "variables.css";
+@import "src/in-out.css";
+@import "src/flower.css";
 @import "src/main.css";
+@import "src/weather.css";
 
 .hidden {
   display: none;
@@ -12,7 +15,6 @@
 body {
   font-family: "Nanum Myeongjo", serif;
 }
-
 
 img {
   position: absolute;
@@ -24,4 +26,8 @@ img {
   left: 0px;
   right: 0px;
   z-index: -1;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

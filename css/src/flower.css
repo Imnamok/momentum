@@ -1,0 +1,27 @@
+.flower {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 15px 30px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 90%;
+  left: 50%; /* 전체 가운데 기준에서 50퍼 떨어짐 */
+  transform: translateX(-50%); /* 개체의 넓이만큼 50퍼를 반대로 이동한다. */
+}
+
+.flower span {
+  display: block;
+  color: whitesmoke;
+}
+
+.flower span:first-child {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.flower span:last-child {
+  font-size: 21px;
+}

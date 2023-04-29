@@ -1,5 +1,3 @@
-const weather = document.querySelector("#weather span:first-child");
-const city = document.querySelector("#weather span:last-child");
 const API_KEY = "0e846ca355008a131eba1b331e1a2f63";
 
 function onGeoOk(position) {
@@ -9,8 +7,14 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
+      const city = document.querySelector(".city");
+      const weather = document.querySelector(".temp");
+      const weatherImg = document.querySelector(".weatherIcon");
+      const Icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
       city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${Math.floor(data.main.temp)}℃`;
+      weather.innerText = `${Math.floor(data.main.temp)}℃ / ${data.weather[0].main}`;
+      weatherImg.src = Icon;
     });
 }
 function onGeoError() {

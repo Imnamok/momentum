@@ -1,0 +1,100 @@
+#login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-box span {
+  display: block;
+  color: whitesmoke;
+  font-size: 25px;
+}
+
+.login-box input {
+  font-family: "Nanum Myeongjo", serif;
+  outline: none;
+  border: none;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  color: whitesmoke;
+  font-size: 20px;
+  margin-top: 30px;
+  border-bottom: 2px solid rgba(245, 245, 245, 0.3);
+}
+
+.login-box input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.login-box input:focus {
+  border-bottom: 2px solid rgba(245, 245, 245, 1);
+  transition: border-color 0.5s ease-in-out;
+}
+
+.logout {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  top: 93%;
+  right: 2%;
+  color: whitesmoke;
+}
+
+.logout i {
+  transition: 0.5s ease-in-out;
+}
+
+.logout:hover > i {
+  transform: scale(1.2);
+}
+
+.logout span {
+  font-family: "Nanum Myeongjo", serif;
+  position: absolute;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 17px;
+  width: 70px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 3px;
+  border-radius: 5px;
+  top: -110%;
+  right: 55%;
+  transform: translate(50%, 50%);
+  opacity: 0;
+  transition: 0.5s;
+
+  visibility: hidden;
+}
+
+.logout span::after {
+  content: "";
+  position: absolute;
+  background-color: whitesmoke;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg) translatex(-50%);
+  bottom: -5px;
+  left: 50%;
+}
+
+.logout:hover span {
+  opacity: 1;
+  visibility: visible;
+}

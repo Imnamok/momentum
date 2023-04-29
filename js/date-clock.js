@@ -15,7 +15,7 @@ function getDate() {
   weekday[5] = "금";
   weekday[6] = "토";
 
-  today.innerText = `${year}.${month}.${date}(${weekday[calendar.getDay()]})`;
+  today.innerText = `${year}.${month}.${date}.(${weekday[calendar.getDay()]})`;
 }
 
 function getClock() {
