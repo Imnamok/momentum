@@ -11,10 +11,10 @@ function onGeoOk(position) {
       const city = document.querySelector(".city");
       const weather = document.querySelector(".temp");
       const weatherImg = document.querySelector(".weatherIcon");
-      const Icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+      const Icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`; //날씨 아이콘 가져오기
       city.innerText = data.name;
       weather.innerText = `${Math.floor(data.main.temp)}℃ / ${data.weather[0].main}`;
-      weatherImg.src = Icon;
+      weatherImg.src = Icon; // 날씨 아이콘의 소스는 변수 선언한 Icon이 됨.
     });
 }
 function onGeoError() {

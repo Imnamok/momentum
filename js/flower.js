@@ -9,6 +9,8 @@ const flowerArr = [
   { image: "sakura.jpg", name: "벚꽃", mean: "아름다운 정신(영혼), 정신적 사랑, 삶의 아름다움" },
   { image: "sunflower.jpg", name: "해바라기", mean: "애모, 숭배, 당신을 바라봅니다." },
   { image: "tulip.jpg", name: "튤립", mean: "매혹적인 사랑, 매력적인 사랑" },
+  { image: "daisie.jpg", name: "데이지", mean: "겸손함, 아름다움, 천진난만함" },
+  { image: "camelia.jpg", name: "동백꽃", mean: "그 누구보다 당신을 사랑합니다, 청렴, 절조" },
 ];
 
 const chosenImage = flowerArr[Math.floor(Math.random() * flowerArr.length)];

@@ -1,5 +1,5 @@
-let today = document.querySelector("h1#maindate");
-let clock = document.querySelector("h2#mainclock");
+let today = document.querySelector("span#maindate");
+let clock = document.querySelector("span#mainclock");
 
 function getDate() {
   const calendar = new Date();
@@ -20,7 +20,7 @@ function getDate() {
 
 function getClock() {
   const clocks = new Date();
-  const hours = String(clocks.getHours()).padStart(2, "0");
+  const hours = String(clocks.getHours());
   const minutes = String(clocks.getMinutes()).padStart(2, "0");
   const seconds = String(clocks.getSeconds()).padStart(2, "0");
 
@@ -36,3 +36,16 @@ function getClock() {
 getDate();
 getClock();
 setInterval(getClock, 1000);
+
+const visibleCal = document.querySelector(".date-clock");
+visibleCal.addEventListener("click", toggleBtn);
+
+function toggleBtn() {
+  const hiddenCal = document.querySelector(".calendar");
+
+  if (hiddenCal.style.visibility !== "hidden") {
+    hiddenCal.style.visibility = "hidden";
+  } else {
+    hiddenCal.style.visibility = "visible";
+  }
+}

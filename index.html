@@ -24,9 +24,37 @@
     </div>
 
     <div id="main-page" class="hidden">
-      <h1 id="maindate"></h1>
-      <h2 id="mainclock">00:00:00</h2>
-      <h1 id="greeting"></h1>
+      <div class="date-clock-cal__box">
+        <div class="date-clock">
+          <i class="fa-sharp fa-regular fa-calendar" style="color: wheat"></i>
+          <span id="maindate"></span>
+          <i class="fa-solid fa-minus fa-rotate-90 fa-lg"></i>
+          <i class="fa-solid fa-clock" style="color: rosybrown"></i>
+          <span id="mainclock">00:00:00</span>
+        </div>
+        <div class="calendar">
+          <div class="cal-nav">
+            <a href="javascript:;" class="nav-btn prev"></a>
+            <div class="nav-ym"></div>
+            <a href="javascript:;" class="nav-btn next"></a>
+          </div>
+
+          <div class="cal-day">
+            <div class="day-column">
+              <div class="day">일</div>
+              <div class="day">월</div>
+              <div class="day">화</div>
+              <div class="day">수</div>
+              <div class="day">목</div>
+              <div class="day">금</div>
+              <div class="day">토</div>
+            </div>
+            <div class="dates-box"></div>
+          </div>
+        </div>
+      </div>
+
+      <span id="greeting"></span>
 
       <form id="todo-form">
         <input type="text" placeholder="Write a To Do and Press Enter" required />
@@ -44,6 +72,8 @@
         <img src="" class="weatherIcon" />
       </div>
 
+      <div class="music-container"></div>
+
       <div class="logout-container">
         <button class="logout">
           <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
@@ -58,6 +88,7 @@
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/calendar.js"></script>
 
     <script src="https://kit.fontawesome.com/46d58f205e.js" crossorigin="anonymous"></script>
   </body>

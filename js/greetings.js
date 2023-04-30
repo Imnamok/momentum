@@ -23,7 +23,7 @@ function onLogoutSubmit() {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `안녕하세요. ${username}님! \n 오늘도 좋은 하루 보내세요.`;
+  greeting.innerText = `안녕하세요. ${username}님! \n 오늘도 좋은 하루 보내시길.. :)`;
   loginPage.classList.add(HIDDEN_CLASSNAME);
   mainPage.classList.remove(HIDDEN_CLASSNAME);
 }

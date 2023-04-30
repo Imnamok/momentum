@@ -1,13 +1,12 @@
 .weather {
   position: absolute;
   top: 2%;
-  right: 2%;
-  width: 220px;
+  right: 1.5%;
+  width: 230px;
   font-size: 21px;
   padding: 5px 15px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
-  color: whitesmoke;
 }
 
 .weatherIcon {
