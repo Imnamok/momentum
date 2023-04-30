@@ -17,13 +17,31 @@ function deleteToDo(event) {
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
+
+  function checkToDo() {
+    if (checkBtn.style.color === "whitesmoke") {
+      checkBtn.style.color = "#3fe87f";
+      // document.querySelector("#todo-list span").style.textDecoration = "none";
+    } else {
+      checkBtn.style.color = "whitesmoke";
+      // document.querySelector("#todo-list span").style.textDecoration = "line-through";
+    }
+  }
+
+  const checkBtn = document.createElement("i");
+  checkBtn.classList = "fa-solid fa-square-check";
+  checkBtn.addEventListener("click", checkToDo);
+
   const span = document.createElement("span");
   span.innerText = newTodo.text;
-  const button = document.createElement("button");
-  button.innerText = "❌";
-  button.addEventListener("click", deleteToDo);
+
+  const deleteBtn = document.createElement("i");
+  deleteBtn.classList = "fa-solid fa-square-minus";
+  deleteBtn.addEventListener("click", deleteToDo);
+
+  li.appendChild(checkBtn);
   li.appendChild(span);
-  li.appendChild(button);
+  li.appendChild(deleteBtn);
   toDoList.appendChild(li);
 }
 function handleToDoSubmit(event) {
@@ -44,4 +62,19 @@ if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
+}
+
+const visibleTodo = document.querySelector(".todo-btn");
+visibleTodo.addEventListener("click", toggleTodo);
+
+function toggleTodo() {
+  const hiddenTodo = document.querySelector(".todo-box");
+
+  // hiddenTodo.classList.toggle("hidden");
+
+  if (hiddenTodo.style.opacity !== "0") {
+    hiddenTodo.style.opacity = "0";
+  } else {
+    hiddenTodo.style.opacity = "1";
+  }
 }

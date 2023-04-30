@@ -12,6 +12,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: appearLoginBox 1s ease-in-out;
+}
+
+@keyframes appearLoginBox {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .login-box span {
@@ -30,24 +40,20 @@
   color: whitesmoke;
   font-size: 23px;
   margin-top: 30px;
+  padding-bottom: 5px;
   border-bottom: 2px solid rgba(245, 245, 245, 0.3);
   transition: 0.5s ease-in-out;
 }
 
-.login-box input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
-}
-
 .login-box input:focus {
   border-bottom: 2px solid rgba(245, 245, 245, 1);
-  transition: border-color 0.5s ease-in-out;
 }
 
-.logout {
+.logout-btn {
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   border: none;
-  cursor: pointer;
   width: 50px;
   height: 50px;
   border-radius: 10px;
@@ -56,15 +62,15 @@
   color: whitesmoke;
 }
 
-.logout i {
+.logout-btn i {
   transition: 0.3s ease-in-out;
 }
 
-.logout:hover > i {
+.logout-btn:hover > i {
   transform: scale(1.1);
 }
 
-.logout span {
+.logout-btn span {
   font-family: "Nanum Myeongjo", serif;
   position: absolute;
   background-color: whitesmoke;
@@ -84,7 +90,7 @@
   visibility: hidden;
 }
 
-.logout span::after {
+.logout-btn span::after {
   content: "";
   position: absolute;
   background-color: whitesmoke;
@@ -95,7 +101,7 @@
   left: 50%;
 }
 
-.logout:hover span {
+.logout-btn:hover span {
   opacity: 1;
   visibility: visible;
 }

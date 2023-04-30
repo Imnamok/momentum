@@ -5,11 +5,13 @@
 @import "variables.css";
 @import "src/in-out.css";
 @import "src/flower.css";
-@import "src/main.css";
+@import "src/greeting.css";
 @import "src/weather.css";
 @import "src/date-clock.css";
 @import "src/music.css";
 @import "src/calendar.css";
+@import "src/todo.css";
+@import "src/bookmark.css";
 
 .hidden {
   display: none;
@@ -18,7 +20,6 @@
 body {
   font-family: "Nanum Myeongjo", serif;
   color: whitesmoke;
-  overflow-x: scroll;
 }
 
 img {

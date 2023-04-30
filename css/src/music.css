@@ -1,0 +1,66 @@
+.music-btn {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  top: 93%;
+  left: 1.5%;
+  color: whitesmoke;
+}
+
+.music-btn i {
+  transition: 0.3s ease-in-out;
+}
+
+.music-btn:hover > i {
+  transform: scale(1.1);
+}
+
+.music-btn span {
+  font-family: "Nanum Myeongjo", serif;
+  position: absolute;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 17px;
+  width: 80px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0px;
+  border-radius: 5px;
+  top: -110%;
+  right: 55%;
+  transform: translate(50%, 50%);
+  opacity: 0;
+  transition: 0.3s;
+
+  visibility: hidden;
+}
+
+.music-btn span::after {
+  content: "";
+  position: absolute;
+  background-color: whitesmoke;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg) translatex(-50%);
+  bottom: -5px;
+  left: 50%;
+}
+
+.music-btn:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.music {
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  left: 4.5%;
+  top: 93%;
+  transition: all 0.5s ease-in-out;
+
+}

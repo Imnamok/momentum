@@ -7,6 +7,7 @@ function getDate() {
   const month = calendar.getMonth() + 1;
   const date = calendar.getDate();
   const weekday = new Array(7);
+
   weekday[0] = "일";
   weekday[1] = "월";
   weekday[2] = "화";
@@ -37,15 +38,28 @@ getDate();
 getClock();
 setInterval(getClock, 1000);
 
-const visibleCal = document.querySelector(".date-clock");
-visibleCal.addEventListener("click", toggleBtn);
+// const visibleCal = document.querySelector(".date-clock");
+// visibleCal.addEventListener("click", toggleBtn);
 
-function toggleBtn() {
+// function toggleBtn() {
+//   const hiddenCal = document.querySelector(".calendar");
+
+//   if (hiddenCal.style.visibility !== "hidden") {
+//     hiddenCal.style.visibility = "hidden";
+//   } else {
+//     hiddenCal.style.visibility = "visible";
+//   }
+// }
+
+const visibleCal = document.querySelector(".date-clock");
+visibleCal.addEventListener("click", toggleCal);
+
+function toggleCal() {
   const hiddenCal = document.querySelector(".calendar");
 
-  if (hiddenCal.style.visibility !== "hidden") {
-    hiddenCal.style.visibility = "hidden";
+  if (hiddenCal.style.opacity !== "0") {
+    hiddenCal.style.opacity = "0";
   } else {
-    hiddenCal.style.visibility = "visible";
+    hiddenCal.style.opacity = "1";
   }
 }

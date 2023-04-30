@@ -8,7 +8,30 @@
   align-items: center;
   top: 90%;
   left: 50%; /* 전체 가운데 기준에서 50퍼 떨어짐 */
-  transform: translateX(-50%); /* 개체의 넓이만큼 50퍼를 반대로 이동한다. */
+  transform: translateX(-50%);
+}
+
+.loginflower {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 15px 30px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 90%;
+  left: 50%; /* 전체 가운데 기준에서 50퍼 떨어짐 */
+  transform: translateX(-50%);
+  animation: appearFlowerBox 1s ease-in-out;
+}
+
+@keyframes appearFlowerBox {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .flower span {

@@ -2,7 +2,7 @@ const loginPage = document.querySelector("#login-page");
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const mainPage = document.querySelector("#main-page");
-const logoutBtn = document.querySelector(".logout");
+const logoutBtn = document.querySelector(".logout-btn");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";

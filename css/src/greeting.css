@@ -1,9 +1,9 @@
 #greeting {
   position: absolute;
   width: 520px;
-  font-size: 40px;
+  font-size: 35px;
   padding: 15px 20px;
-  top: 12%;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;

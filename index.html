@@ -13,11 +13,11 @@
       <form id="login-form">
         <div class="login-box">
           <span>어서와요, 만나서 반가워요.</span>
-          <input class="login-box__input" required maxlength="15" type="text" placeholder="당신의 이름을 알려주세요." />
+          <input class="login-box__input" required maxlength="8" type="text" placeholder="당신의 이름을 알려주세요." />
         </div>
       </form>
 
-      <div class="flower">
+      <div class="flower loginflower">
         <span class="flowerName1"></span>
         <span class="flowerLang1"></span>
       </div>
@@ -54,32 +54,66 @@
         </div>
       </div>
 
-      <span id="greeting"></span>
-
-      <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required />
-      </form>
-      <ul id="todo-list"></ul>
-
-      <div class="flower">
-        <span class="flowerName2"></span>
-        <span class="flowerLang2"></span>
-      </div>
-
       <div class="weather">
         <span class="city"></span>
         <span class="temp"></span>
         <img src="" class="weatherIcon" />
       </div>
 
-      <div class="music-container"></div>
+      <span id="greeting"></span>
 
-      <div class="logout-container">
-        <button class="logout">
-          <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
-          <span>Log Out</span>
-        </button>
+      <button class="bookmark-btn">
+        <i class="fa-solid fa-book-bookmark" style="color: lightsalmon"></i>
+      </button>
+
+      <div class="bookmark-box">
+        <div class="bookmark-titlebox">
+          <div class="bookmark-title">
+            <span>당신의 북마크</span>
+          </div>
+        </div>
+
+        <div class="bookmark-column">
+          <a class="bookmark" href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-sm"></i></a>
+          <a class="bookmark" href="https://ko-kr.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+          <a class="bookmark" href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+          <a class="bookmark" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+          <a class="bookmark" href="https://twitter.com/?lang=ko"><i class="fa-brands fa-twitter"></i></a>
+          <a class="bookmark" href="https://www.google.co.kr/?hl=ko"><i class="fa-brands fa-google fa-sm"></i></a>
+        </div>
       </div>
+
+      <div class="flower">
+        <span class="flowerName2"></span>
+        <span class="flowerLang2"></span>
+      </div>
+
+      <button class="music-btn">
+        <i class="fa-solid fa-compact-disc fa-2x"></i>
+        <span>Piano</span>
+      </button>
+
+      <audio class="music" src="music/iruma.mp3" controls="1"></audio>
+
+      <button class="todo-btn">
+        <i class="fa-solid fa-list-check fa-2x"></i>
+        <span>Todo List</span>
+      </button>
+
+      <div class="todo-box">
+        <div>
+          <form id="todo-form">
+            <span>할 일 있으신가요?</span>
+            <input type="text" placeholder="여기에 작성주세요." required />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+
+      <button class="logout-btn">
+        <i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i>
+        <span>Log Out</span>
+      </button>
     </div>
 
     <script src="js/greetings.js"></script>
@@ -89,6 +123,8 @@
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/calendar.js"></script>
+    <script src="js/bookmark.js"></script>
+    <script src="js/music.js"></script>
 
     <script src="https://kit.fontawesome.com/46d58f205e.js" crossorigin="anonymous"></script>
   </body>

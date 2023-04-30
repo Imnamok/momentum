@@ -7,21 +7,23 @@ let currentDate = thisMonth.getDate();
 
 renderCal(thisMonth);
 function renderCal(thisMonth) {
-  //렌더링을 위한 데이터 정리
+  // 렌더링을 위한 데이터 정리
   currentYear = thisMonth.getFullYear();
   currentMonth = thisMonth.getMonth();
   currentDate = thisMonth.getDate();
+
   // 지난달 마지막날의 요일, 날짜
   const lastDay = new Date(currentYear, currentMonth, 0);
   const prevDate = lastDay.getDate();
   const prevDay = lastDay.getDay();
+
   // 이번달 마지막날의 요일, 날짜
   const currentendday = new Date(currentYear, currentMonth + 1, 0);
   const nextDate = currentendday.getDate();
   const nextDay = currentendday.getDay();
-  //console.log(prevDate, prevDay, nextDate, nextDay);
+  // console.log(prevDate, prevDay, nextDate, nextDay);
 
-  const navYM = document.querySelector(".nav-ym");
+  const navYM = document.querySelector(".nav-ym"); // 올해 현재 월 표시하기
   navYM.innerText = `${currentYear}년 ${currentMonth + 1}월`;
 
   const calendarDates = document.querySelector(".dates-box");
@@ -42,6 +44,7 @@ function renderCal(thisMonth) {
       calendarDates.innerHTML = calendarDates.innerHTML + '<div class="dates  disable">' + i + "</div>";
     }
   }
+
   //오늘 날짜 표시하기
   const today = new Date();
   if (currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
@@ -50,6 +53,8 @@ function renderCal(thisMonth) {
     currentMonthDate[todayDate - 1].classList.add("today");
   }
 }
+
+// 달력 전 후 변경
 const goPrev = document.querySelector(".prev");
 const goNext = document.querySelector(".next");
 

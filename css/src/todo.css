@@ -1,0 +1,142 @@
+.todo-btn {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  top: 93%;
+  right: 5%;
+  color: whitesmoke;
+}
+
+.todo-btn i {
+  transition: 0.3s ease-in-out;
+}
+
+.todo-btn:hover > i {
+  transform: scale(1.1);
+}
+
+.todo-btn span {
+  font-family: "Nanum Myeongjo", serif;
+  position: absolute;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 17px;
+  width: 80px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0px;
+  border-radius: 5px;
+  top: -110%;
+  right: 55%;
+  transform: translate(50%, 50%);
+  opacity: 0;
+  transition: 0.3s;
+
+  visibility: hidden;
+}
+
+.todo-btn span::after {
+  content: "";
+  position: absolute;
+  background-color: whitesmoke;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg) translatex(-50%);
+  bottom: -5px;
+  left: 50%;
+}
+
+.todo-btn:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.todo-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+}
+
+#todo-form span {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+#todo-form input {
+  font-family: "Nanum Myeongjo", serif;
+  display: flex;
+  width: 400px;
+  border: none;
+  background: none;
+  outline: none;
+  color: whitesmoke;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgba(245, 245, 245, 0.3);
+  transition: 0.5s ease-in-out;
+}
+
+#todo-form input:focus {
+  border-bottom: 2px solid rgba(245, 245, 245, 1);
+}
+
+#todo-list {
+  height: 450px;
+  overflow-y: scroll;
+}
+
+#todo-list li {
+  width: 80%;
+  display: flex;
+  border: 2px solid whitesmoke;
+  list-style-type: none;
+  margin-bottom: 30px;
+  font-size: 23px;
+  border-radius: 10px;
+
+  padding: 15px 15px;
+}
+
+#todo-list span {
+  width: 80%;
+  margin-left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#todo-list .fa-square-check {
+  width: 10%;
+  cursor: pointer;
+  font-size: 25px;
+  color: whitesmoke;
+  transition: all 0.3s ease-in-out;
+}
+
+#todo-list .fa-square-minus {
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  color: #ed2a61;
+  font-size: 25px;
+}
+
+#todo-list .fa-square-minus:hover {
+  scale: 1.1;
+}
