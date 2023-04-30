@@ -4,7 +4,7 @@
   right: 1.5%;
   font-size: 21px;
   padding: 5px;
-  padding-left: 15px;
+  padding-left: 12px;
   padding-right: 50px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -16,4 +16,8 @@
   height: 40px;
   top: -10%;
   left: 83%;
+}
+
+.weather i {
+  
 }
